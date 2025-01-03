@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+
+<!-- HTML file with  doctype, html, head, and body tags -->
+
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Portfolio Single page web application">
+    <meta name="keywords" content="Skills , Services, Projects , Animations, Design, certifications">
+    <meta name="author" content="Aishwarya Jadhav">
+
+    <!-- Logo (image Taken from online sources) -->
+    <link rel="icon"
+        href="https://thumbs.dreamstime.com/b/letter-aj-logotype-design-company-name-colored-blue-swoosh-vector-logo-business-identity-203864933.jpg">
+
+    <!-- Title Here -->
+    <title>MyPortfolio</title>
+
+    <link rel="stylesheet" href="../src/output.css">
+
+    <style>
+        .toggle-bg {
+            background-color: #2c3e50;
+            /* Dark background color */
+        }
+
+        .toggle-on {
+            background-color: #1abc9c;
+            /* Light blue active state */
+        }
+
+        .downloadfile:hover .tooltip {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    
+    <!-- Header tag -->
+    <header>
+        <!-- Light/Dark Mode -->
+        <div class="headermodebtn">
+            <div class="headermodebtn2">
+                <div id="theme-toggle"
+                    class="relative w-16 h-8 rounded-full p-1 flex items-center justify-between cursor-pointer bg-gray-400 dark:toggle-bg transition-colors duration-300">
+                    <div id="toggle-thumb"
+                        class="w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300">
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        class="bi bi-moon w-5 h-5 absolute left-2" viewBox="0 0 16 16">
+                        <path
+                            d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-sun-fill-dark" viewBox="0 0 16 16">
+                        <path
+                            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <section id="headers">
+            <!-- Logo -->
+            <article class="headersection ">
+                <h1 class="ml-2">Aish's </h1>
+                <img src="../images/Logo.png" alt="Aishwarya' creation">
+                <h1 class="absolute left-20 transform -translate-y-10 rotate-90 creation text-xl">
+                    Creation
+                </h1>
+            </article>
+
+            <article class="flex-1">
+                <nav class="flex justify-center items-center navigationbar">
+                    <span> <a href="#home">Home</a></span>
+                    <span><a href="#about">About</a></span>
+                    <span><a href="#skills">Skills</a></span>
+                    <span><a href="#certifications">Certifications</a></span>
+                    <span><a href="#projects">Projects</a></span>
+                    <span> <a href="#contact">Contact Me</a></span>
+                </nav>
+
+
+                <div class="selecttag flex mt-3">
+                    <button onclick="toggleDropdown()"
+                        class="bg-gradient-to-r from-pink-500 to-yellow-500 dark:from-purple-700 dark:to-indigo-700">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-card-list" viewBox="0 0 16 16">
+                            <path
+                                d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
+                            <path
+                                d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
+                        </svg>
+                    </button>
+
+                    <div id="dropdownMenu" class="absolute bg-white rounded-md shadow-lg hidden">
+                        <!-- <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Option 1</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Option 2</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Option 3</a> -->
+                        <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+                        <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</a>
+                        <a href="#skills" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Skills</a>
+                        <a href="#certifications"
+                            class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Certifications</a>
+                        <a href="#projects" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Projects</a>
+                        <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact Me</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </header>
+    <br>
+    <main>
+
+        <!--             Home section -->
+        <section class="mt-32 mb-24 flex items-center justify-center">
+            <article id="home">
+
+                <!-- Profile image with animation -->
+
+                <div class="flex justify-center pb-7 pt-5">
+                    <img src="../images/Me.jpg" alt="" id="mypic">
+                </div>
+
+                <!-- Heading and intro text  -->
+
+                <div class="text-center">
+                    <h3 class="text-5xl font-extrabold">
+                        Hello I'm Aishwarya Jadhav
+                    </h3>
+                    <h2 class="mt-4 text-lg">
+                        A creative Developer & Designer
+                    </h2>
+                </div>
+
+                <!-- Social Icons -->
+
+                <div class="text-center mt-10 ">
+                    <div
+                        class="border border-black dark:border-white h-10 flex justify-center items-center space-x-6 m-2 p-10 homeicons">
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-instagram border-2 rounded-lg border-indigo-700 p-1 hover:bg-orange-700"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                            </svg>
+                        </a>
+
+                        <a href="https://x.com/home?lang=en" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-twitter border-2 rounded-lg border-indigo-700 p-1 hover:bg-sky-700"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                            </svg>
+                        </a>
+
+
+                        <a href="https://www.facebook.com/" class="facebook" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-facebook border-2 rounded-lg border-indigo-700 p-1 hover:bg-sky-700 "
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                            </svg>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/aishwarya-jadhav16/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-linkedin border-2 rounded-lg border-indigo-700 p-1 hover:bg-orange-700"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                            </svg>
+                        </a>
+
+                        <!-- Download button with hovering effect has been given as in icon -->
+
+                        <div class="relative downloadfile">
+                            <!-- Button with SVG -->
+                            <button class="border-2 rounded-lg border-indigo-700 p-1 hover:bg-sky-700 animate-pulse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-download" viewBox="0 0 16 16">
+                                    <path
+                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                                    <path
+                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                                </svg>
+                            </button>
+
+                            <!-- Tooltip message -->
+                            <span
+                                class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-32 bg-indigo-700 text-white text-center text-sm rounded-lg p-2 opacity-0 transition-opacity duration-300 ease-in-out tooltip">
+                                Download File
+                            </span>
+                        </div>
+
+                    </div>
+                    <!-- One more button with hovering effect redirecting to my Projects -->
+                    <div class="mt-5">
+                        <a href="#projects">
+                            <button
+                                class="mt-6 px-6 py-3 rounded-lg animate-bounce bg-gradient-to-r from-pink-500 to-yellow-500 dark:from-purple-700 dark:to-indigo-700 dark:hover:from-pink-800 dark:hover:to-yellow-800">
+                                Explore My Creations
+                            </button>
+                        </a>
+
+                    </div>
+
+                </div>
+            </article>
+
+        </section>
+        <hr>
+
+        <!--                       AboutMe section -->
+        <section id="about" class="flex pb-11">
+            <article>
+                <!-- HEading -->
+                <div class="name">
+                    <h1 class="m-3">AISHWARYA JADHAV</h1>
+                    <h6>Crafting websites and apps that people love to use</h6>
+                </div>
+
+                <div class="flex justify-center items-center space-x-6 m-2">
+
+                    <!-- Add more social icons / links -->
+                    <div class="w-1/4">
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor"
+                                            class="bi bi-instagram border-2 rounded-lg border-indigo-700 p-1 hover:bg-orange-700"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/" class="facebook" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor"
+                                            class="bi bi-facebook border-2 rounded-lg border-indigo-700 p-1 hover:bg-sky-700 "
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/aishwarya-jadhav16/" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor"
+                                            class="bi bi-linkedin border-2 rounded-lg border-indigo-700 p-1 hover:bg-orange-700"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- mobile responsive -  here class w-1/4 should change  -->
+                    <!-- Profile Image -->
+                    <div class="w-1/4">
+                        <img src="../images/Me.jpg" alt="" id="mypic2" class="mypic2">
+                    </div>
+
+                    <!-- About me Content -->
+                    <div class="w-1/2">
+                        <p id="aboutmeintro">Hello , I'm <strong>Aishwarya Jadhav</strong> a <em>software engineer</em>
+                            who loves
+                            designing and developing digital experiences through websites
+                            and applications.
+                        </p>
+                    </div>
+
+                </div>
+                <br>
+
+                <div id="moreaboutmemain">
+                    <div class="" id="moreaboutme1">
+                        <h1 id="moreaboutme">currently i am working on a few projects that reflects my love for coding.
+                            On my portfolio
+                            you will find my skills with creative projects. I enjoy the challenge of making
+                            user-friendly interfaces.
+                            I believe that great apps and websites can change the way people interact with the world.
+                            In my spare time, i enjoy photography, reading, and travelling.
+                            I am excited to connect with others and share ideas.
+                        </h1>
+                    </div>
+
+                    <!-- Read More Button -->
+                    <div class="" id="moreaboutme2">
+                        <p class="readmore">
+                            <button onclick="document.getElementById('readmorecontent').className='visible'">Read
+                                More</button>
+                        </p>
+
+                        <p id="readmorecontent" class="hidden">Thanks for visiting my portfolio and feel free to reach
+                            out at the end of this portfolio
+                            in contact section if you'd like
+                            to connect with me.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+        <hr>
+
+        <!--          Skills Section -->
+        <section>
+            <article id="skills">
+                <!-- Heading -->
+                <h1 class="text-center mt-3 font-bold text-4xl animate-pulse">Skills</h1>
+                <br>
+
+                <section class="skillssection">
+
+                    <article class="skillsarticle1">
+                        <!-- HEading for soft skills -->
+                        <h1
+                            class="flex justify-center animate-bounce font-['Open_Sans'] font-bold text-xl skillheading">
+                            Skills that
+                            make me a Strong and Adaptable Teammate
+                        </h1><br>
+                        <!-- Soft skills in circular progress bar -->
+                        <section class="border border-blue-950 dark:border-white p-10 softskills bordergiven">
+                            <article class=" border border-x-white flex justify-center items-center m-3">
+                                <h1 class="flex justify-start items-start text-start">TeamWork</h1>
+
+                                <div class="relative flex items-center justify-center">
+                                    <!-- SVG for the Circular Background -->
+                                    <svg class="w-24 h-24">
+                                        <circle class="text-gray-300" stroke-width="4" stroke="currentColor"
+                                            fill="transparent" r="36" cx="50%" cy="50%" />
+                                        <circle class="text-blue-600" stroke-width="4" stroke-dasharray="226"
+                                            stroke-dashoffset="20" stroke-linecap="round" stroke="currentColor"
+                                            fill="transparent" r="36" cx="50%" cy="50%" />
+                                    </svg>
+                                    <!-- Percentage Text Inside Circle -->
+                                    <span class="absolute text-xl font-semibold text-blue-600">90%</span>
+                                </div>
+                            </article>
+
+                            <article class=" border border-x-white flex justify-center items-center m-3">
+                                <h1 class="flex justify-start items-start text-start">Adaptability</h1>
+
+                                <div class="relative flex items-center justify-center">
+                                    <!-- SVG for the Circular Background -->
+                                    <svg class="w-24 h-24">
+                                        <circle class="text-gray-300" stroke-width="4" stroke="currentColor"
+                                            fill="transparent" r="36" cx="50%" cy="50%" />
+                                        <circle class="text-blue-600" stroke-width="4" stroke-dasharray="226"
+                                            stroke-dashoffset="20" stroke-linecap="round" stroke="currentColor"
+                                            fill="transparent" r="36" cx="50%" cy="50%" />
+                                    </svg>
+                                    <!-- Percentage Text Inside Circle -->
+                                    <span class="absolute text-xl font-semibold text-blue-600">90%</span>
+                                </div>
+                            </article>
+
+                            <article class=" border border-x-white flex justify-center items-center m-3">
+                                <h1 class="flex justify-start items-start text-start">Time Management</h1>
+
+                                <div class="relative flex items-center justify-center">
+                                    <!-- SVG for the Circular Background -->
+                                    <svg class="w-24 h-24">
+                                        <circle class="text-gray-300" stroke-width="4" stroke="currentColor"
+                                            fill="transparent" r="36" cx="50%" cy="50%" />
+                                        <circle class="text-blue-600" stroke-width="4" stroke-dasharray="226"
+                                            stroke-dashoffset="10" stroke-linecap="round" stroke="currentColor"
+                                            fill="transparent" r="36" cx="50%" cy="50%" />
+                                    </svg>
+                                    <!-- Percentage Text Inside Circle -->
+                                    <span class="absolute text-xl font-semibold text-blue-600">95%</span>
+                                </div>
+                            </article>
+
+                            <article class=" border border-x-white flex justify-center items-center m-3">
+                                <h1 class="flex justify-start items-start text-start">Attention to Detail</h1>
+
+                                <div class="relative flex items-center justify-center">
+                                    <!-- SVG for the Circular Background -->
+                                    <svg class="w-24 h-24">
+                                        <circle class="text-gray-300" stroke-width="4" stroke="currentColor"
+                                            fill="transparent" r="36" cx="50%" cy="50%" />
+                                        <circle class="text-blue-600" stroke-width="4" stroke-dasharray="226"
+                                            stroke-dashoffset="10" stroke-linecap="round" stroke="currentColor"
+                                            fill="transparent" r="36" cx="50%" cy="50%" />
+                                    </svg>
+                                    <!-- Percentage Text Inside Circle -->
+                                    <span class="absolute text-xl font-semibold text-blue-600">95%</span>
+                                </div>
+                            </article>
+
+
+                        </section>
+
+                    </article>
+
+                    <article class="skillsarticle2">
+                        <!-- Heading for language known -->
+                        <h1
+                            class="flex justify-center animate-bounce font-['Open_Sans'] font-bold text-xl skillheading">
+                            A set of
+                            Tools and Languages that fuel my web and app development
+                        </h1><br>
+                        <!-- Language known in linear progress bar -->
+                        <section class="space-y-4  m-0 p-10 border border-x-white">
+                            <article class="flex">
+                                <div class=" w-1/4 skilllanguage">
+                                    <h1>HTML</h1>
+                                </div>
+
+                                <div class="flex-1">
+                                    <div class=" bg-gray-300 rounded-full h-6 relative">
+                                        <!-- Progress Indicator -->
+                                        <div class="bg-green-500 h-6 rounded-full" style="width: 95%;"></div>
+                                        <!-- Progress Text -->
+                                        <span
+                                            class="absolute inset-0 flex justify-center items-center text-white font-medium">95%</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="flex">
+                                <div class="w-1/4 skilllanguage">
+                                    <h1>Bootstrap</h1>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="bg-gray-400 rounded-xl h-6 relative">
+                                        <div class="bg-green-500 h-6 rounded-xl" style="width: 80%;"></div>
+                                        <span
+                                            class="absolute inset-0 flex justify-center items-center text-white font-medium">80%</span>
+
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="flex">
+                                <div class="w-1/4 skilllanguage">
+                                    <h1>React</h1>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="bg-gray-400 rounded-xl h-6 relative">
+                                        <div class="bg-green-500 h-6 rounded-xl" style="width: 30%;"></div>
+                                        <span
+                                            class="absolute inset-0 flex justify-center items-center text-white font-medium">30%</span>
+
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="flex">
+                                <div class="w-1/4 skilllanguage">
+                                    <h1>CSS</h1>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="bg-gray-400 rounded-xl h-6 relative">
+                                        <div class="bg-green-500 h-6 rounded-xl" style="width: 95%;"></div>
+                                        <span
+                                            class="absolute inset-0 flex justify-center items-center text-white font-medium">95%</span>
+
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="flex">
+                                <div class="w-1/4 skilllanguage">
+                                    <h1>JavaScript</h1>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="bg-gray-400 rounded-xl h-6 relative">
+                                        <div class="bg-green-500 h-6 rounded-xl" style="width: 90%;"></div>
+                                        <span
+                                            class="absolute inset-0 flex justify-center items-center text-white font-medium">90%</span>
+
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="flex">
+                                <div class="w-1/4 skilllanguage">
+                                    <h1>MongoDb</h1>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="bg-gray-400 rounded-xl h-6 relative">
+                                        <div class="bg-green-500 h-6 rounded-xl" style="width: 10%;"></div>
+                                        <span
+                                            class="absolute inset-0 flex justify-center items-center text-white font-medium">10%</span>
+
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="flex">
+                                <div class="w-1/4 skilllanguage">
+                                    <h1>Angular</h1>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="bg-gray-400 rounded-xl h-6 relative">
+                                        <div class="bg-green-500 h-6 rounded-xl" style="width: 90%;"></div>
+                                        <span
+                                            class="absolute inset-0 flex justify-center items-center text-white font-medium">90%</span>
+
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="flex">
+                                <div class="w-1/4 skilllanguage">
+                                    <h1>Telwind</h1>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="bg-gray-400 rounded-xl h-6 relative">
+                                        <div class="bg-green-500 h-6 rounded-xl" style="width: 40%;"></div>
+                                        <span
+                                            class="absolute inset-0 flex justify-center items-center text-white font-medium">40%</span>
+
+                                    </div>
+                                </div>
+                            </article>
+
+
+
+
+                        </section>
+                    </article>
+                </section>
+            </article>
+        </section>
+
+        <hr>
+
+        <!--     My Certifications Section -->
+
+        <section id="certifications">
+            <!-- Certification heading -->
+            <h1 class="text-center m-5 font-semibold text-3xl animate-bounce">My Certifications</h1>
+            <h1 class="text-center certificatetext">My professional certifications reflect my dedication to excellence
+                and continuous learning
+            </h1>
+
+            <!-- Certifications and the button which will open the certificates -->
+            <section class="m-5 certificationsection">
+                <article class="border border-x-white  p-2 certificationarticle1">
+                    <h1 class="m-2 flex justify-center">Bachelor of science in Information Technology</h1>
+                    <p>Completed <strong>Bachelors Degree</strong> from <em>Mumbai university</em> in 2020</p>
+                    <p>CGPA - 7.80</p>
+                </article>
+                <article class=" m-5 items-center justify-center flex certificationarticle2">
+                    <button id="downloadBtn" onclick="document.getElementById('degreeimage').className ='visible'; 
+                    document.getElementById('downloadBtn').className='hidden' "
+                        class="mt-6 px-6 py-3 rounded-lg animate-bounce bg-gradient-to-r from-pink-500 to-yellow-500 dark:from-purple-700 dark:to-indigo-700">
+                        View Certificate
+                    </button>
+                    <img src="../images/Degree.jpg" alt="" class="hidden" height="200" width="200" id="degreeimage">
+                </article>
+            </section>
+
+            <section class="m-5 certificationsection">
+                <article class="border border-x-white certificationarticle1 p-2">
+                    <h1 class="m-2 flex justify-center">Full Stack Java Development</h1>
+                    <p> Awarded by: Simplilearn <br>
+                        Date Issued: October 2024 <br>
+
+                    </p>
+                </article>
+                <article class="certificationarticle2 m-5 items-center justify-center flex">
+                    <button id="fullstack"
+                        class="mt-6 px-6 py-3 rounded-lg animate-bounce bg-gradient-to-r from-pink-500 to-yellow-500 dark:from-purple-700 dark:to-indigo-700"
+                        onclick="document.getElementById('fullstackcertificate').className='visible'; document.getElementById('fullstack').className='hidden' ">
+                        View Certificate
+                    </button>
+                    <img src="../images/fullstackcertificate.png" alt="" class="hidden" height="150" width="120"
+                        id="fullstackcertificate">
+                </article>
+            </section>
+
+            <section class="m-5 certificationsection">
+                <article class="border border-x-white certificationarticle1 p-2">
+                    <h1 class="m-2 flex justify-center">Software Testing</h1>
+                    <p> Awarded by: Quastech <br>
+                        Date Issued: January 2021<br>
+                    </p>
+                </article>
+                <article class="certificationarticle2 m-5 items-center justify-center flex">
+                    <button id="SoftwareTestingbtn"
+                        class="mt-6 px-6 py-3 rounded-lg animate-bounce bg-gradient-to-r from-pink-500 to-yellow-500 dark:from-purple-700 dark:to-indigo-700"
+                        onclick="document.getElementById('SoftwareTesting').className='visible'; document.getElementById('SoftwareTestingbtn').className='hidden' ">
+                        View Certificate
+                    </button>
+                    <img src="../images/SoftwareTesting.png" alt="" class="hidden" height="150" width="120"
+                        id="SoftwareTesting">
+                </article>
+            </section>
+
+            <section class="m-5 certificationsection">
+                <article class="border border-x-white certificationarticle1 p-2">
+                    <h1 class="m-2 flex justify-center">Full Stack web development</h1>
+                    <p> Awarded by: Internshala<br>
+                        Date Issued: October 2024 <br>
+                    </p>
+                </article>
+                <article class="certificationarticle2 m-5 items-center justify-center flex">
+                    <button id="FullStackWebDevelopmentbtn"
+                        class="mt-6 px-6 py-3 rounded-lg animate-bounce bg-gradient-to-r from-pink-500 to-yellow-500 dark:from-purple-700 dark:to-indigo-700"
+                        onclick="document.getElementById('FullStackWebDevelopment').className='visible'; document.getElementById('FullStackWebDevelopmentbtn').className='hidden' ">
+                        View Certificate
+                    </button>
+                    <img src="../images/FullStackWebDevelopment.png" alt="" class="hidden" height="150" width="120"
+                        id="FullStackWebDevelopment">
+                </article>
+            </section>
+
+            <section class="m-5 certificationsection">
+                <article class="border border-x-white certificationarticle1 p-2">
+                    <h1 class="m-2 flex justify-center">Front-End Developer</h1>
+                    <p> Awarded by: Simplilearn<br>
+                        Date Issued: October 2022 <br>
+                    </p>
+                </article>
+                <article class="certificationarticle2 m-5 items-center justify-center flex">
+                    <button id="FrontEndbtn"
+                        class="mt-6 px-6 py-3 rounded-lg animate-bounce bg-gradient-to-r from-pink-500 to-yellow-500 dark:from-purple-700 dark:to-indigo-700"
+                        onclick="document.getElementById('FrontEnd').className='visible'; document.getElementById('FrontEndbtn').className='hidden' ">
+                        View Certificate
+                    </button>
+                    <img src="../images/FrontEnd.png" alt="" class="hidden" height="150" width="120" id="FrontEnd">
+                </article>
+            </section>
+
+
+        </section>
+
+        <hr>
+
+        <!--       My Projects -->
+        <section id="projects">
+            <!-- Project section HEading -->
+            <div id="projectsheading">
+                <h1 class="animate-bounce">My Projects</h1>
+                <h3 id="projectsheading2">Each Project is an opportunity to craft something meaningful</h3>
+            </div>
+            <br>
+
+            <!-- Projects with Github Link -->
+            <section class="" id="projectsection">
+
+                <article id="project2" class="projects">
+                    <!-- <div id="projectcontent">
+                        <h1>Complaint Redressal System</h1>
+                    </div> -->
+                    <div id="projectcontent2">
+                        <h1>ICIN Bank System</h1>
+                        <p>Dynamic and responsive Java online banking web application to deposit, withdraw, and transfer
+                            the money between the accounts.</p>
+                        <div>
+                            <ul class="list-disc">
+                                List of technologies used -
+                                <li>
+                                    Frontend - Angular
+                                </li>
+                                <li>
+                                    Backend - Java
+                                </li>
+                                <li>
+                                    Database - SQL
+                                </li>
+                            </ul>
+                        </div>
+                        <br>
+                        <a href="https://github.com/Aishwaryajadhav2000/ICIN_Bank" target="_blank" class="projectsicon"
+                            id="github">
+                            Visit project on Github
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                <path fill-rule="evenodd"
+                                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </article>
+
+                <article id="project1" class="projects">
+                    <!-- <div id="projectcontent">
+                        <h1>Complaint Redressal System</h1>
+                    </div> -->
+                    <div id="projectcontent2">
+                        <h1>Complaint Redressal System</h1>
+                        <p>In this Project the customer can raise a ticket on the complaint and Manager assign those
+                            complaints to engineer</p>
+                        <div>
+                            <ul class="list-disc">
+                                List of technologies used -
+                                <li>
+                                    Frontend - Angular
+                                </li>
+                                <li>
+                                    Backend - Java
+                                </li>
+                                <li>
+                                    Database - SQL
+                                </li>
+                            </ul>
+                        </div>
+                        <br>
+                        <a href="https://github.com/Aishwaryajadhav2000/complaint_redressal_system" target="_blank"
+                            class="projectsicon" id="github">
+                            Visit project on Github
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                <path fill-rule="evenodd"
+                                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </article>
+
+                <article id="project3" class="projects">
+                    <!-- <div id="projectcontent">
+                        <h1>Complaint Redressal System</h1>
+                    </div> -->
+                    <div id="projectcontent2">
+                        <h1>Medicare</h1>
+                        <p>Application for Customers to order medicines</p>
+                        <div>
+                            <ul class="list-disc">
+                                List of technologies used -
+                                <li>
+                                    Frontend - Angular
+                                </li>
+                                <li>
+                                    Backend - Java
+                                </li>
+                                <li>
+                                    Database - SQL
+                                </li>
+                            </ul>
+                        </div>
+                        <br>
+                        <a href="https://github.com/Aishwaryajadhav2000/project_Medicare" target="_blank"
+                            class="projectsicon" id="github">
+                            Visit project on Github
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                <path fill-rule="evenodd"
+                                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <article id="project4" class="projects">
+                    <div id="projectcontent">
+                        <h1>My Movie Plan</h1>
+                    </div>
+                    <div id="projectcontent2">
+                        <h1>My Movie Plan</h1>
+                        <p>In this Project admin upload all the upcoming movies and the customer can book the ticket for
+                            movie.</p>
+                        <div>
+                            <ul class="list-disc">
+                                List of technologies used -
+                                <li>
+                                    Frontend - Angular
+                                </li>
+                                <li>
+                                    Backend - Java
+                                </li>
+                                <li>
+                                    Database - SQL
+                                </li>
+                            </ul>
+                        </div>
+                        <br>
+                        <a href="https://github.com/Aishwaryajadhav2000/MyMoviePlan" target="_blank"
+                            class="projectsicon" id="github">
+                            Visit project on Github
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                <path fill-rule="evenodd"
+                                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </article>
+
+                <article id="project5" class="projects">
+                    <!-- <div id="projectcontent">
+                        <h1>Complaint Redressal System</h1>
+                    </div> -->
+                    <div id="projectcontent2">
+                        <h1>Sporty Shoes</h1>
+                        <p>Application of Shoes Brand to give multiple options of shoes for customers</p>
+                        <div>
+                            <ul class="list-disc">
+                                List of technologies used -
+                                <li>
+                                    Frontend - Angular
+                                </li>
+                                <li>
+                                    Backend - Java
+                                </li>
+                                <li>
+                                    Database - SQL
+                                </li>
+                            </ul>
+                        </div>
+                        <br>
+                        <a href="https://github.com/Aishwaryajadhav2000/SportyShoes_Phase3Project" target="_blank"
+                            class="projectsicon" id="github">
+                            Visit project on Github
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                <path fill-rule="evenodd"
+                                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <article id="project6" class="projects">
+                    <!-- <div id="projectcontent">
+                        <h1>Complaint Redressal System</h1>
+                    </div> -->
+                    <div id="projectcontent2">
+                        <h1>Quiz Test</h1>
+                        <p>Test application for students for their practice in multiple choice question format</p>
+                        <div>
+                            <ul class="list-disc">
+                                List of technologies used -
+                                <li>
+                                    Frontend - Angular
+                                </li>
+                                <li>
+                                    Backend - Java
+                                </li>
+                                <li>
+                                    Database - SQL
+                                </li>
+                            </ul>
+                        </div>
+                        <br>
+                        <a href="https://github.com/Aishwaryajadhav2000/Quiz_Test" target="_blank" class="projectsicon"
+                            id="github">
+                            Visit project on Github
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                <path fill-rule="evenodd"
+                                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </article>
+
+
+
+                <article id="project7" class="projects">
+                    <!-- <div id="projectcontent">
+                        <h1>Complaint Redressal System</h1>
+                    </div> -->
+                    <div id="projectcontent2">
+                        <h1>My Portfolio</h1>
+                        <p>My portfolio web application reated - my Skills and Projects </p>
+                        <div>
+                            <ul class="list-disc">
+                                List of technologies used -
+                                <li>
+                                    HTML
+                                </li>
+                                <li>
+                                    CSS
+                                </li>
+                                <li>
+                                    Telwind
+                                </li>
+                            </ul>
+                        </div>
+                        <br>
+                        <a href="https://github.com/Aishwaryajadhav2000/complaint_redressal_system" target="_blank"
+                            class="projectsicon" id="github">
+                            Visit project on Github
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                <path fill-rule="evenodd"
+                                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <article id="project8" class="projects">
+                    <!-- <div id="projectcontent">
+                        <h1>Complaint Redressal System</h1>
+                    </div> -->
+                    <div id="projectcontent2">
+                        <h1>Tourist Guide</h1>
+                        <p>Application to suggest people which is the best Destination they can travel</p>
+                        <div>
+                            <ul class="list-disc">
+                                List of technologies used -
+
+                                <li>
+                                    Java
+                                </li>
+
+                            </ul>
+                        </div>
+                        <br>
+                        <a href="https://github.com/Aishwaryajadhav2000/TouristGuide" target="_blank"
+                            class="projectsicon" id="github">
+                            Visit project on Github
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                <path fill-rule="evenodd"
+                                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <article id="project9" class="projects">
+                    <!-- <div id="projectcontent">
+                        <h1>Complaint Redressal System</h1>
+                    </div> -->
+                    <div id="projectcontent2">
+                        <h1>My Destination Dairies</h1>
+                        <p>My personal Web application mentioned my destinations where i travelled</p>
+                        <div>
+                            <ul class="list-disc">
+                                List of technologies used -
+                                <li>
+                                    HTML
+                                </li>
+                                <li>
+                                    CSS
+                                </li>
+
+                            </ul>
+                        </div>
+                        <br>
+                        <a href="https://github.com/Aishwaryajadhav2000/complaint_redressal_system" target="_blank"
+                            class="projectsicon" id="github">
+                            Visit project on Github
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                <path fill-rule="evenodd"
+                                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </article>
+
+
+
+            </section>
+
+
+
+
+        </section>
+        <hr>
+
+        <!--     Contact Me Form -->
+        <section class="contactme">
+            <br>
+            <!-- Contact Me heading -->
+            <h1 id="contactmeheading">CONTACT ME</h1><br>
+            <article id="contact">
+                <form action="">
+                    <h1 class="">Fill the Form</h1>
+                    <h6 class="flex justify-center formheading">Please feel free to contact me for any inquiries,
+                        collaborations, or additional information.</h6>
+                    <br>
+
+                    <label for="firstname">FirstName</label>
+                    <input  name="firstname" type="text" placeholder="Enter Your Name"><br>
+
+                    <label for="lastname">LastName</label>
+                    <input name="lastname" type="text" placeholder="Enter Your Last name"><br>
+
+                    <label for="email">Email</label>
+                    <input name="email" type="email" placeholder="Enter Your Email id" ><br>
+
+                    <label for="contact">ContactNo</label>
+                    <input name="contact" type="number" placeholder="Enter Your Contact No" ><br>
+
+                    <label for="file">Upload</label>
+                    <input name="file" type="file" placeholder="Select File" ><br>
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="" placeholder="Any message For me?"></textarea><br>
+                    <!-- Submit button with hoveing effect -->
+                    <input type="submit" placeholder="submit" id="submit" onclick="alert('form has been submitted ')">
+                    <!-- <button class="items-center flex justify-center">Submit</button> -->
+                </form>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!--         Footer -->
+
+    <footer>
+        <!-- Icons has been given here with hoveing effect and link -->
+        <section class="footer">
+            <article class="footerarticle">
+                <a href="https://web.whatsapp.com/" target="_blank" class="whatsapp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="" height="" fill="green"
+                        class="bi bi-whatsapp footericons" viewBox="0 0 16 16">
+                        <path
+                            d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                    </svg>
+                    <p class="hidden">7755981749</p>
+                </a>
+                <a href="https://email.com/lander" target="_blank" class="email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="" height="" fill="red"
+                        class="bi bi-envelope-at-fill footericons" viewBox="0 0 16 16">
+                        <path
+                            d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671" />
+                        <path
+                            d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791" />
+                    </svg>
+                    <p class="hidden">Email me on aishwaryaj1608@gmail.com</p>
+                </a>
+
+                <a href="https://x.com/?lang=en-in" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="" height="" fill="currentColor"
+                        class="bi bi-twitter-x footericons" viewBox="0 0 16 16">
+                        <path
+                            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                    </svg>
+                </a>
+
+                <a href="https://in.linkedin.com/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="" height="" fill="skyblue"
+                        class="bi bi-linkedin footericons" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                    </svg>
+                </a>
+
+                <a href="https://www.facebook.com/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="" height="" fill="blue"
+                        class="bi bi-facebook footericons" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                    </svg>
+                </a>
+
+                <a href="https://www.threads.net/login" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="" height="" fill="currentColor"
+                        class="bi bi-threads-fill footericons" viewBox="0 0 16 16">
+                        <path
+                            d="M6.81 9.204c0-.41.197-1.062 1.727-1.062.469 0 .758.034 1.146.121-.124 1.606-.91 1.818-1.674 1.818-.418 0-1.2-.218-1.2-.877Z" />
+                        <path
+                            d="M2.59 16h10.82A2.59 2.59 0 0 0 16 13.41V2.59A2.59 2.59 0 0 0 13.41 0H2.59A2.59 2.59 0 0 0 0 2.59v10.82A2.59 2.59 0 0 0 2.59 16M5.866 5.91c.567-.81 1.315-1.126 2.35-1.126.73 0 1.351.246 1.795.711.443.466.696 1.132.754 1.983q.368.154.678.363c.832.559 1.29 1.395 1.29 2.353 0 2.037-1.67 3.806-4.692 3.806-2.595 0-5.291-1.51-5.291-6.004C2.75 3.526 5.361 2 8.033 2c1.234 0 4.129.182 5.217 3.777l-1.02.264c-.842-2.56-2.607-2.968-4.224-2.968-2.675 0-4.187 1.628-4.187 5.093 0 3.107 1.69 4.757 4.222 4.757 2.083 0 3.636-1.082 3.636-2.667 0-1.079-.906-1.595-.953-1.595-.177.925-.651 2.482-2.733 2.482-1.213 0-2.26-.838-2.26-1.936 0-1.568 1.488-2.136 2.663-2.136.44 0 .97.03 1.247.086 0-.478-.404-1.296-1.426-1.296-.911 0-1.16.288-1.45.624l-.024.027c-.202-.135-.875-.601-.875-.601Z" />
+                    </svg>
+                </a>
+
+                <a href="https://www.messenger.com/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="" height="" fill="blue"
+                        class="bi bi-messenger footericons" viewBox="0 0 16 16">
+                        <path
+                            d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.64.64 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.64.64 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
+                    </svg>
+                </a>
+
+                <a class="phone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="" height="" fill="currentColor"
+                        class="bi bi-phone-fill footericons" viewBox="0 0 16 16">
+                        <path
+                            d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0" />
+                    </svg>
+                    <p class="hidden">7755981749</p>
+
+                </a>
+            </article>
+        </section>
+
+
+    </footer>
+
+
+
+
+
+
+    <script>
+
+        // Functionality for dropdown meny for mobile screens 
+        function toggleDropdown() {
+            const menu = document.getElementById("dropdownMenu");
+            menu.classList.toggle("hidden");
+        }
+
+        // Dark / Light Mode Toggle functionality
+        const toggleButton = document.getElementById('theme-toggle');
+        const toggleThumb = document.getElementById('toggle-thumb');
+        const moonIcon = document.getElementById('moon-icon');
+        const sunIcon = document.getElementById('sun-icon');
+        const htmlElement = document.documentElement;
+        localStorage.setItem('theme' , 'dark');
+
+        toggleButton.addEventListener('click', function () {
+            const isDarkMode = htmlElement.classList.toggle('dark');
+            toggleThumb.classList.toggle('translate-x-8');
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        });
+
+        if (localStorage.getItem('theme') === 'dark') {
+            htmlElement.classList.add('dark');
+            toggleThumb.classList.add('translate-x-8');
+        } else {
+            htmlElement.classList.remove('dark');
+            toggleThumb.classList.remove('translate-x-8');
+        }
+
+    </script>
+
+
+</body>
+
+</html>
