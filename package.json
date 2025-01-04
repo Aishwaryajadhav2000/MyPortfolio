@@ -4,6 +4,6 @@
   },
 
   "scripts": {
-    "build": "tailwindcss -i ./src/output.css -o ./dist/pages/ --minify"
+    "build": "npx tailwindcss -i ./src/output.css -o ./dist/pages/ --minify"
   }
 }
