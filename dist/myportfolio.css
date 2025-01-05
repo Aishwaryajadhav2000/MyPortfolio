@@ -68,10 +68,30 @@ header {
 }
 
 @media (max-width:500px) {
-    .navigationbar {
-        display: none;
-    }
 
+    .navbr{
+        padding: 15px;
+        justify-content: space-between;
+    }
+    
+    .navigationbar {
+        display: contents;
+        justify-content: space-between;
+        margin-top: 40px;
+        padding: 50px;
+        font-weight: bolder;
+        font-size: medium;
+        a{
+            margin: 10px;
+        }
+    }
+    
+    .navigationbar a:hover {
+        background-color: white;
+        color: #0a0546;
+        border: 10px solid white;
+    }
+    
     .toggle {
         @apply flex justify-center
     }
