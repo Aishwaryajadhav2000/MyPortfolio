@@ -256,7 +256,8 @@ header {
     .skillsarticle2 {
         padding-top: 5px;
     }
-    .skilllanguage{
+
+    .skilllanguage {
         @apply w-1/3
     }
 }
@@ -276,6 +277,11 @@ header {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: large;
     }
+}
+
+.certificationsection{
+    justify-content: center;
+    display: flex;
 }
 
 #certifications section article:nth-of-type(1):hover {
@@ -298,12 +304,13 @@ header {
     }
 
     .certificationarticle1 {
-        @apply w-8/12
+        /* @apply w-8/12  */
+        width: 95%;
     }
 
-    .certificationarticle2 {
+    /* .certificationarticle2 {
         @apply w-1/4
-    }
+    } */
 }
 
 @media(max-width:500px) {
@@ -381,11 +388,12 @@ header {
 }
 
 @media(min-width: 501px) and (max-width: 799px) {
-    #projectsection{
+    #projectsection {
         @apply flex p-2 flex-wrap;
         justify-content: space-between;
         display: flex;
     }
+
     #projectsection article {
         /* @apply w-1/2;  */
         flex-basis: 47%;
@@ -396,7 +404,7 @@ header {
 }
 
 #project1 {
-    background-image: url('../images/project1.png');
+    background-image: url('./images-demo/project1.png');
 }
 
 #project1:hover {
@@ -405,6 +413,7 @@ header {
     background-color: #252525;
     color: #f4d03f;
 
+
     #projectcontent {
         display: none;
     }
@@ -427,14 +436,13 @@ header {
 
 }
 
-#project2 {
-    background-image: url('../images/ICIN_Bank.jpg');
+/* #project2 {
+    background-image: url('./images-demo/ICIN_Bank.jpg');
     background-size: cover;
 }
 
 #project2:hover {
     background-image: none;
-    /* background-color: aqua; */
     background-color: #252525;
     color: #f4d03f;
 
@@ -457,10 +465,75 @@ header {
             display: flex;
         }
     }
+} */
+
+.projects {
+    width: 100%;
+    height: 50%;
+    perspective: 1000px;
+    /* Enables 3D effect */
 }
 
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease-in-out;
+    /* Smooth flipping animation */
+    transform-style: preserve-3d;
+    /* Ensures 3D transformation */
+}
+
+#project2:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    /* Rotates the card on hover */
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* Hides the content on the backside */
+}
+
+.flip-card-front {
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-card-back {
+    background-color: #252525;
+    /* Backside color */
+    color: #f4d03f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    /* Ensures the backside starts flipped */
+}
+
+#projectcontent2 h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.list-disc {
+    text-align: left;
+    margin-top: 10px;
+}
+
+
 #project3 {
-    background-image: url('../images/Medicare.jpg');
+    background-image: url('./images-demo/Medicare.jpg');
     background-size: cover;
 }
 
@@ -492,7 +565,7 @@ header {
 }
 
 #project4 {
-    background-image: url('../images/Movie_Plan.jpg');
+    background-image: url('./images-demo/Movie_Plan.jpg');
     background-size: cover;
 
 }
@@ -525,7 +598,7 @@ header {
 }
 
 #project5 {
-    background-image: url('../images/Sporty_Shoes.jpg');
+    background-image: url('./images-demo/Sporty_Shoes.jpg');
     background-size: cover;
 }
 
@@ -557,7 +630,7 @@ header {
 }
 
 #project6 {
-    background-image: url('../images/Quiz_Test.png');
+    background-image: url('./images-demo/Quiz_Test.png');
     background-size: cover;
 
 }
@@ -590,7 +663,7 @@ header {
 }
 
 #project7 {
-    background-image: url('../images/background.jpeg');
+    background-image: url('./images-demo/background.jpeg');
     background-size: cover;
 
 }
@@ -623,7 +696,7 @@ header {
 }
 
 #project8 {
-    background-image: url('../images/Tourist_Guide.png');
+    background-image: url('./images-demo/Tourist_Guide.png');
     background-size: cover;
 
 }
@@ -656,7 +729,7 @@ header {
 }
 
 #project9 {
-    background-image: url('../images/My-Destination-Diaries.png');
+    background-image: url('./images-demo/My-Destination-Diaries.png');
     background-size: cover;
 
 }
@@ -690,9 +763,12 @@ header {
 
 /*                         Contact Me      */
 .contactme {
+   
     #contactmeheading {
         @apply font-bold text-3xl flex ml-20 animate-bounce;
     }
+
+    margin-top: 28%;
 }
 
 form {
@@ -773,7 +849,7 @@ form {
 
 } */
 
-.footerarticle{
+.footerarticle {
     @apply flex items-center space-x-10 m-2
 }
 
@@ -809,7 +885,8 @@ form {
 .footericons {
     @apply h-10 w-10
 }
-.formheading{
+
+.formheading {
     color: #f4d03f;
 }
 
@@ -835,10 +912,11 @@ form {
         }
     }
 
-    .footerarticle{
+    .footerarticle {
         @apply flex items-center space-x-5 m-0
     }
-    .formheading{
+
+    .formheading {
         font-size: medium;
     }
 }
